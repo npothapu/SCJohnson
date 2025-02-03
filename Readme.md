@@ -29,6 +29,13 @@ npm install typo-js
 npm install playwright-html-reporter
 npm install dotenv
 npm install csv-parser
+## for image comparision
+    npm install resemblejs
+    npm install canvas
+        ## for windows-build-tools
+        npm install -g windows-build-tools 
+        ##  for mac/linux
+        brew install cairo pango libpng jpeg giflib  
 ```
 
 ## Running Tests
@@ -66,3 +73,41 @@ The test script is designed to capture a full-page screenshot and store it in a 
 ## Conclusion
 You are now ready to use Playwright for automated testing and visual verification. Modify the script as needed to fit your testing requirements.
 
+## overview folder structure
+tests/
+│── helpers/
+│   │── linkChecker.js          
+│   │── spellChecker.js        
+│   │── headerFooterChecker.js  
+│   │── screenCapture.js        # Screenshot capture helper
+│
+│── config/
+│   │── .env                    # Default environment file
+│   │── .env.dev                # Development environment variables
+│   │── .env.qa                 # QA environment variables
+│   │── .env.stage              # Staging environment variables
+│   │── .env.prod               # Production environment variables
+│
+│── main.spec.js                
+│── links.spec.js                
+│── spell.spec.js                
+│── headerFooter.spec.js         
+│
+└── playwright.config.js         
+
+## Run tests for different environments while capturing failures.
+
+Run for Development: bash ENV=dev npx playwright test
+
+Run for QA:          bash ENV=qa npx playwright test
+
+Run for Staging:     bash ENV=stage npx playwright test
+
+Run for Production:  bash ENV=prod npx playwright test
+
+## 🚀 Running the Tests
+Run all browsers  -- bash: ENV=dev npx playwright test
+Run only Chromium -- bash: ENV=dev npx playwright test --project=Chromium
+
+Run in CI (GitHub Actions, Jenkins, etc.)
+bash: CI=true ENV=qa npx playwright test

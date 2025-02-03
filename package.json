@@ -1,21 +1,34 @@
 {
   "name": "scjohnson",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {},
+  "description": " SC Johnson",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "description": "",
-  "devDependencies": {
-    "@playwright/test": "^1.50.1",
-    "@types/node": "^22.13.0"
+  "homepage": "https://github.com/npothapu/SCJohnson#readme",
+  "bugs": {
+    "url": "https://github.com/npothapu/SCJohnson/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npothapu/SCJohnson.git"
+  },
+  "license": "ISC",
+  "author": "Nandakumar Reddy",
+  "type": "commonjs",
+  "main": "/tests",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {},
   "dependencies": {
+    "canvas": "^3.1.0",
     "csv-parser": "^3.2.0",
     "dotenv": "^16.4.7",
     "playwright-html-reporter": "^0.1.11",
+    "resemblejs": "^5.0.0",
     "typo-js": "^1.2.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.0"
   }
 }
