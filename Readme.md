@@ -1,50 +1,59 @@
 # Playwright Setup Guide
 
-This guide provides step-by-step instructions for setting up Playwright for automated testing and visual testing verification.
+This guide provides step-by-step instructions for setting up Playwright for automated testing and visual verification.
 
-## Prerequisites
+---
+
+## 📌 Prerequisites
 Ensure you have the following installed before proceeding:
-- Node.js (Latest LTS version recommended)
-- npm (Node Package Manager)
+- **Node.js** (Latest LTS version recommended)
+- **npm** (Node Package Manager)
 
-## Installation Steps
+---
+
+## 🔧 Installation Steps
 Follow these commands to set up Playwright and necessary dependencies.
 
-### 1. Install Playwright
+### 1️⃣ Install Playwright
 Run the following command to install Playwright globally:
 ```sh
 npm install -g @playwright/test@latest
 ```
 
-### 2. Install Playwright Browsers
+### 2️⃣ Install Playwright Browsers
 Install the required browsers and dependencies:
 ```sh
 npx playwright install --with-deps
 ```
 
-### 3. Install Additional Dependencies
+### 3️⃣ Install Additional Dependencies
 Install the necessary npm packages:
 ```sh
-npm install typo-js
-npm install playwright-html-reporter
-npm install dotenv
-npm install csv-parser
-## for image comparision
-    npm install resemblejs
-    npm install canvas
-        ## for windows-build-tools
-        npm install -g windows-build-tools 
-        ##  for mac/linux
-        brew install cairo pango libpng jpeg giflib  
+npm install typo-js playwright-html-reporter dotenv csv-parser
 ```
+#### For image comparison:
+```sh
+npm install resemblejs canvas
+```
+#### OS-Specific Dependencies:
+- **Windows:**
+  ```sh
+  npm install -g windows-build-tools
+  ```
+- **Mac/Linux:**
+  ```sh
+  brew install cairo pango libpng jpeg giflib
+  ```
 
-## Running Tests
-Once the setup is complete, you can run your Playwright tests using:
+---
+
+## 🚀 Running Tests
+Once the setup is complete, run your Playwright tests using:
 ```sh
 npx playwright test
 ```
 
-## Generating HTML Reports
+### 📊 Generating HTML Reports
 To generate an HTML report after running tests:
 ```sh
 npx playwright test --reporter=html
@@ -54,60 +63,105 @@ After execution, open the report with:
 npx playwright show-report
 ```
 
-## Capturing Screenshots
-The test script is designed to capture a full-page screenshot and store it in a `screenshots` directory outside the `tests` folder.
+---
 
-### Expected Behavior
-- The script will navigate to the specified URL.
-- It will scroll down gradually to ensure all content is loaded.
-- A screenshot will be saved with the format: `imagecaptured_<browserName>_<timestamp>.png`.
+## 📸 Capturing Screenshots
+The test script captures a full-page screenshot and stores it in a `screenshots` directory outside the `tests` folder.
 
-## Troubleshooting
-### Issue: Timeout Exceeded
-- Increase the test timeout by modifying `test.setTimeout(90000);` in your test script.
+### ✅ Expected Behavior
+- The script navigates to the specified URL.
+- It scrolls down gradually to ensure all content is loaded.
+- A screenshot is saved with the format: `imagecaptured_<browserName>_<timestamp>.png`.
 
-### Issue: Screenshots Not Capturing Entire Page
+---
+
+## 🔧 Troubleshooting
+### ⚠️ Issue: Timeout Exceeded
+- Increase the test timeout by modifying:
+  ```js
+  test.setTimeout(90000);
+  ```
+
+### ⚠️ Issue: Screenshots Not Capturing Entire Page
 - Ensure the scrolling logic properly loads all elements before capturing the screenshot.
-- Adjust the viewport size dynamically to match the full page height.
+- Adjust the viewport size dynamically to match the full-page height.
 
-## Conclusion
-You are now ready to use Playwright for automated testing and visual verification. Modify the script as needed to fit your testing requirements.
+---
 
-## overview folder structure
+## 📂 Folder Structure
+```
+data/
+│── url_batches/   # Stores URL batch data
+
+dictionaries/
+│── en_US/
+│   │── company-dictionaries/   # Company-specific dictionaries
+│   │── en_US.aff   # English dictionary affix file
+│   │── en_US.dic   # English dictionary words file
+
+env/
+│── .env          # Default environment file
+│── .env.dev      # Development environment variables
+│── .env.qa       # QA environment variables
+│── .env.stage    # Staging environment variables
+│── .env.prod     # Production environment variables
+
+node_modules/
+playwright_report/
 tests/
+│── main.spec.js    # Main test specification file
+
+utils/
 │── helpers/
-│   │── linkChecker.js          
-│   │── spellChecker.js        
-│   │── headerFooterChecker.js  
-│   │── screenCapture.js        # Screenshot capture helper
-│
-│── config/
-│   │── .env                    # Default environment file
-│   │── .env.dev                # Development environment variables
-│   │── .env.qa                 # QA environment variables
-│   │── .env.stage              # Staging environment variables
-│   │── .env.prod               # Production environment variables
-│
-│── main.spec.js                
-│── links.spec.js                
-│── spell.spec.js                
-│── headerFooter.spec.js         
-│
-└── playwright.config.js         
+│   │── extractLinksUtil.js    # Utility for extracting links
+│   │── linkCheckerUtils.js    # Utilities for link checking
+│   │── spellCheckerUtils.js   # Utilities for spell checking
+│   │── visualTesting.js       # Utilities for visual testing
 
-## Run tests for different environments while capturing failures.
+package-lock.json
+package.json
+playwright.config.js
+readme.md
+```
 
-Run for Development: bash ENV=dev npx playwright test
+---
 
-Run for QA:          bash ENV=qa npx playwright test
+## 🌍 Running Tests in Different Environments
+Run tests for specific environments:
 
-Run for Staging:     bash ENV=stage npx playwright test
+- **Development:**
+  ```sh
+  ENV=dev npx playwright test
+  ```
+- **QA:**
+  ```sh
+  ENV=qa npx playwright test
+  ```
+- **Staging:**
+  ```sh
+  ENV=stage npx playwright test
+  ```
+- **Production:**
+  ```sh
+  ENV=prod npx playwright test
+  ```
 
-Run for Production:  bash ENV=prod npx playwright test
+### 🔹 Running Specific Browsers
+- Run all browsers:
+  ```sh
+  ENV=dev npx playwright test
+  ```
+- Run only **Chromium**:
+  ```sh
+  ENV=dev npx playwright test --project=Chromium
+  ```
 
-## 🚀 Running the Tests
-Run all browsers  -- bash: ENV=dev npx playwright test
-Run only Chromium -- bash: ENV=dev npx playwright test --project=Chromium
+### 🔹 Running in CI (GitHub Actions, Jenkins, etc.)
+```sh
+CI=true ENV=qa npx playwright test
+```
 
-Run in CI (GitHub Actions, Jenkins, etc.)
-bash: CI=true ENV=qa npx playwright test
+---
+
+## 🎯 Conclusion
+You are now ready to use Playwright for automated testing and visual verification. Modify the script as needed to fit your testing requirements. 🚀

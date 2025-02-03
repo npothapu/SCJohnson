@@ -1,3 +1,9 @@
+/**
+ * Author: Nandakumar Pothapu Reddy
+ * Title: Associate Director of Technology
+ * Date: January 30, 2025
+ */
+
 const path = require("path");
 const fs = require("fs");
 const resemble = require("resemblejs");
