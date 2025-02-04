@@ -90,9 +90,6 @@ The test script captures a full-page screenshot and stores it in a `screenshots`
 
 ## 📂 Folder Structure
 ```
-data/
-│── url_batches/   # Stores URL batch data
-
 dictionaries/
 │── en_US/
 │   │── company-dictionaries/   # Company-specific dictionaries
@@ -112,6 +109,12 @@ tests/
 │── main.spec.js    # Main test specification file
 
 utils/
+│── screenshots/   # Stores captured screenshots
+│── url_batches/   # Stores URL batch data
+│   │── scjohnson/
+│   │── vml/
+│   │── teenvoice/
+│
 │── helpers/
 │   │── extractLinksUtil.js    # Utility for extracting links
 │   │── linkCheckerUtils.js    # Utilities for link checking
