@@ -1,3 +1,8 @@
+/**
+ * Author: Nandakumar Pothapu Reddy
+ * Title: Associate Director of Technology
+ * Date: January 23, 2025
+ */
 const { test, expect } = require('@playwright/test');
 const fs = require('fs'); // Use synchronous fs for existsSync and mkdirSync
 const fsp = fs.promises; // Use fs.promises for async operations
