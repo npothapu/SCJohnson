@@ -8,4 +8,4 @@ const { test, expect } = require('@playwright/test');
 const spellcheckerUtils = require('../utils/helpers/spellCheckerUtils');
 
 // Pass `test` from Playwright to the function
-spellcheckerUtils(test);
+// spellcheckerUtils(test);

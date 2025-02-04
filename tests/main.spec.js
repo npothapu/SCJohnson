@@ -1,15 +1,10 @@
-/**
- * Author: Nandakumar Pothapu Reddy
- * Title: Associate Director of Technology
- * Date: January 30, 2025
- */
-
 require("dotenv").config(); // Load environment variables
 
 const { test } = require("@playwright/test");
 const { captureAndCompareScreenshot } = require("../utils/helpers/visualTesting");
 const { runLinkCheck } = require("../utils/helpers/linkCheckerUtils");
-const { extractAndSaveLinks } = require("../utils/helpers/extractLinksUtil"); // Import link extraction utility
+const { extractAndSaveLinks } = require("../utils/helpers/extractLinksUtil");
+const { runFooterLinkCheck, runHeaderLinkCheck } = require("../utils/helpers/navigation_links_checker"); // Import navigation link checkers
 
 test.describe.parallel("Website Testing Suite", () => {
     
@@ -23,6 +18,15 @@ test.describe.parallel("Website Testing Suite", () => {
         await runLinkCheck(page, testInfo, test);
     });
 
+    test("Check all footer links for broken URLs", async ({ page }) => {
+        test.setTimeout(90000);
+        await runFooterLinkCheck(page);
+    });
+
+    test("Check all header links for broken URLs", async ({ page }) => {
+        test.setTimeout(90000);
+        await runHeaderLinkCheck(page);
+    });
 
     test("SC Johnson Homepage Screenshot Test", async ({ page, browserName }) => {
         test.setTimeout(60000);

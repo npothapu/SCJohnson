@@ -1,6 +1,6 @@
-<testsuites id="" name="" tests="12" failures="11" skipped="0" errors="0" time="210.143848">
-<testsuite name="main.spec.js" timestamp="2025-02-04T23:07:41.226Z" hostname="Chromium" tests="3" failures="2" skipped="0" time="140.761" errors="0">
-<testcase name="Website Testing Suite › Extract and save distinct links" classname="main.spec.js" time="9.653">
+<testsuites id="" name="" tests="5" failures="2" skipped="0" errors="0" time="79.056388">
+<testsuite name="main.spec.js" timestamp="2025-02-04T23:34:35.259Z" hostname="Chromium" tests="5" failures="2" skipped="0" time="156.061" errors="0">
+<testcase name="Website Testing Suite › Extract and save distinct links" classname="main.spec.js" time="10.906">
 <system-out>
 <![CDATA[Navigating to URL: https://www.blueparadox.com/
 Extracted 9 unique links.
@@ -13,9 +13,9 @@ Extracted 9 unique links.
 ]]>
 </system-err>
 </testcase>
-<testcase name="Website Testing Suite › Check all links for broken URLs" classname="main.spec.js" time="38.765">
-<failure message="main.spec.js:21:5 Check all links for broken URLs" type="FAILURE">
-<![CDATA[  [Chromium] › main.spec.js:21:5 › Website Testing Suite › Check all links for broken URLs ─────────
+<testcase name="Website Testing Suite › Check all links for broken URLs" classname="main.spec.js" time="35.292">
+<failure message="main.spec.js:16:5 Check all links for broken URLs" type="FAILURE">
+<![CDATA[  [Chromium] › main.spec.js:16:5 › Website Testing Suite › Check all links for broken URLs ─────────
 
     Error: https://www.facebook.com/theblueparadox returned a non-success status code
 
@@ -35,7 +35,7 @@ Extracted 9 unique links.
         at C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:56:89
         at checkLinks (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:53:9)
         at runLinkCheck (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:115:42)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:23:9
+        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:18:9
 
     Error: Some links returned errors
 
@@ -55,7 +55,7 @@ Extracted 9 unique links.
       97 | /**
         at logTestSummary (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:94:67)
         at runLinkCheck (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:121:5)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:23:9
+        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:18:9
 
     attachment #1: checked-links.txt (text/plain) ──────────────────────────────────────────────────
     https://www.blueparadox.com/
@@ -100,7 +100,7 @@ Extracted 9 unique links.
         at C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:56:89
         at checkLinks (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:53:9)
         at runLinkCheck (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:115:42)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:23:9
+        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:18:9
 
     Error: Some links returned errors
 
@@ -120,7 +120,7 @@ Extracted 9 unique links.
       97 | /**
         at logTestSummary (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:94:67)
         at runLinkCheck (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:121:5)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:23:9
+        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:18:9
 
     attachment #1: checked-links.txt (text/plain) ──────────────────────────────────────────────────
     https://www.blueparadox.com/
@@ -163,11 +163,11 @@ https://www.facebook.com/theblueparadox
 [[ATTACHMENT|..\test-results\main-Website-Testing-Suite-Check-all-links-for-broken-URLs-Chromium\trace.zip]]
 🔍 Running tests for environment: qa
 🌍 Testing BASE_URL: https://www.blueparadox.com/
-🔗 Total Links Found: 20
+🔗 Total Links Found: 14
 
 === ✅ Link Check Summary ✅ ===
-🔗 Total Links Checked: 20
-✅ Passed Links: 19
+🔗 Total Links Checked: 14
+✅ Passed Links: 13
 ❌ Failed Links: 1
 ❌ Failed URLs:
 https://www.facebook.com/theblueparadox
@@ -178,11 +178,52 @@ https://www.facebook.com/theblueparadox
 ]]>
 </system-out>
 </testcase>
-<testcase name="Website Testing Suite › SC Johnson Homepage Screenshot Test" classname="main.spec.js" time="92.343">
-<failure message="main.spec.js:27:5 SC Johnson Homepage Screenshot Test" type="FAILURE">
-<![CDATA[  [Chromium] › main.spec.js:27:5 › Website Testing Suite › SC Johnson Homepage Screenshot Test ─────
+<testcase name="Website Testing Suite › Check all footer links for broken URLs" classname="main.spec.js" time="22.717">
+<system-out>
+<![CDATA[Total Footer links found: 14
+Working link in Footer: https://www.instagram.com/theblueparadox (Status: 200)
+Working link in Footer: https://twitter.com/theblueparadox (Status: 200)
+Working link in Footer: /en/plastic-waste-crisis (Status: 200)
+Working link in Footer: /en/solutions (Status: 200)
+Working link in Footer: /en/resources (Status: 200)
+Working link in Footer: /en/in-the-news (Status: 200)
+Working link in Footer: /en/the-exhibit (Status: 200)
+Working link in Footer: /en/about-the-movement (Status: 200)
+Working link in Footer: /en/take-action (Status: 200)
+Working link in Footer: #calculatorModal (Status: 200)
+Working link in Footer: https://terms.scjbrands.com/en-us (Status: 200)
+Working link in Footer: https://privacy.scjbrands.com/en-us (Status: 200)
+Working link in Footer: https://contact.scjbrands.com/en-us (Status: 200)
 
-    Error: ❌ Visual mismatch detected! Images differ by 98.09%
+Footer Test Summary:
+Total Working Links: 13
+Total Broken Links: 1
+
+[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-d9242-ooter-links-for-broken-URLs-Chromium\test-finished-1.png]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[Broken link in Footer: https://www.facebook.com/theblueparadox (Status: 400)
+]]>
+</system-err>
+</testcase>
+<testcase name="Website Testing Suite › Check all header links for broken URLs" classname="main.spec.js" time="13.815">
+<system-out>
+<![CDATA[Total Header links found: 0
+
+Header Test Summary:
+Total Working Links: 0
+Total Broken Links: 0
+
+[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-2588c-eader-links-for-broken-URLs-Chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Website Testing Suite › SC Johnson Homepage Screenshot Test" classname="main.spec.js" time="73.331">
+<failure message="main.spec.js:31:5 SC Johnson Homepage Screenshot Test" type="FAILURE">
+<![CDATA[  [Chromium] › main.spec.js:31:5 › Website Testing Suite › SC Johnson Homepage Screenshot Test ─────
+
+    Error: ❌ Visual mismatch detected! Images differ by 98.48%
 
        at ..\utils\helpers\visualTesting.js:72
 
@@ -194,7 +235,7 @@ https://www.facebook.com/theblueparadox
       74 |         console.log("✅ Screenshots match!");
       75 |     } else {
         at captureAndCompareScreenshot (C:\2025Playwright-Projects\SCJohnson\utils\helpers\visualTesting.js:72:19)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:29:9
+        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:33:9
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     test-results\main-Website-Testing-Suite-34327-on-Homepage-Screenshot-Test-Chromium\test-failed-1.png
@@ -210,7 +251,7 @@ https://www.facebook.com/theblueparadox
 
     Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
 
-    Error: ❌ Visual mismatch detected! Images differ by 98.53%
+    Error: ❌ Visual mismatch detected! Images differ by 98.51%
 
        at ..\utils\helpers\visualTesting.js:72
 
@@ -222,7 +263,7 @@ https://www.facebook.com/theblueparadox
       74 |         console.log("✅ Screenshots match!");
       75 |     } else {
         at captureAndCompareScreenshot (C:\2025Playwright-Projects\SCJohnson\utils\helpers\visualTesting.js:72:19)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:29:9
+        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:33:9
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     test-results\main-Website-Testing-Suite-34327-on-Homepage-Screenshot-Test-Chromium-retry1\test-failed-1.png
@@ -248,791 +289,6 @@ https://www.facebook.com/theblueparadox
 [[ATTACHMENT|..\test-results\main-Website-Testing-Suite-34327-on-Homepage-Screenshot-Test-Chromium-retry1\test-failed-1.png]]
 
 [[ATTACHMENT|..\test-results\main-Website-Testing-Suite-34327-on-Homepage-Screenshot-Test-Chromium-retry1\trace.zip]]
-]]>
-</system-out>
-</testcase>
-</testsuite>
-<testsuite name="spellcheckerTest.spec.js" timestamp="2025-02-04T23:07:41.226Z" hostname="Chromium" tests="9" failures="9" skipped="0" time="138.038" errors="0">
-<testcase name="Spell Check for All Links › Check spelling on link 1 of 9: https://www.blueparadox.com/" classname="spellcheckerTest.spec.js" time="22.502">
-<failure message="spellCheckerUtils.js:86:13 Check spelling on link 1 of 9: https://www.blueparadox.com/" type="FAILURE">
-<![CDATA[  [Chromium] › ..\utils\helpers\spellCheckerUtils.js:86:13 › Spell Check for All Links › Check spelling on link 1 of 9: https://www.blueparadox.com/ 
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 4
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-e90f5--https-www-blueparadox-com--Chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-e90f5--https-www-blueparadox-com--Chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-e90f5--https-www-blueparadox-com--Chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 4
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-e90f5--https-www-blueparadox-com--Chromium-retry1\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-e90f5--https-www-blueparadox-com--Chromium-retry1\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-e90f5--https-www-blueparadox-com--Chromium-retry1\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/: 14, adchoices, johnson, ourprivacy
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-e90f5--https-www-blueparadox-com--Chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-e90f5--https-www-blueparadox-com--Chromium\trace.zip]]
-
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/: 14, adchoices, johnson, ourprivacy
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-e90f5--https-www-blueparadox-com--Chromium-retry1\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-e90f5--https-www-blueparadox-com--Chromium-retry1\trace.zip]]
-]]>
-</system-out>
-</testcase>
-<testcase name="Spell Check for All Links › Check spelling on link 2 of 9: https://www.blueparadox.com/en/plastic-waste-crisis" classname="spellcheckerTest.spec.js" time="17.895">
-<failure message="spellCheckerUtils.js:86:13 Check spelling on link 2 of 9: https://www.blueparadox.com/en/plastic-waste-crisis" type="FAILURE">
-<![CDATA[  [Chromium] › ..\utils\helpers\spellCheckerUtils.js:86:13 › Spell Check for All Links › Check spelling on link 2 of 9: https://www.blueparadox.com/en/plastic-waste-crisis 
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 14
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-d4ab1-com-en-plastic-waste-crisis-Chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-d4ab1-com-en-plastic-waste-crisis-Chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-d4ab1-com-en-plastic-waste-crisis-Chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 14
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-d4ab1-com-en-plastic-waste-crisis-Chromium-retry1\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-d4ab1-com-en-plastic-waste-crisis-Chromium-retry1\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-d4ab1-com-en-plastic-waste-crisis-Chromium-retry1\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/en/plastic-waste-crisis: 2050, 24, 30, pacic, 450, biodegrade, microplastics, 92, 1000, 34, microplastic, adchoices, johnson, ourprivacy
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-d4ab1-com-en-plastic-waste-crisis-Chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-d4ab1-com-en-plastic-waste-crisis-Chromium\trace.zip]]
-
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/en/plastic-waste-crisis: 2050, 24, 30, pacic, 450, biodegrade, microplastics, 92, 1000, 34, microplastic, adchoices, johnson, ourprivacy
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-d4ab1-com-en-plastic-waste-crisis-Chromium-retry1\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-d4ab1-com-en-plastic-waste-crisis-Chromium-retry1\trace.zip]]
-]]>
-</system-out>
-</testcase>
-<testcase name="Spell Check for All Links › Check spelling on link 3 of 9: https://www.blueparadox.com/en/solutions" classname="spellcheckerTest.spec.js" time="19.77">
-<failure message="spellCheckerUtils.js:86:13 Check spelling on link 3 of 9: https://www.blueparadox.com/en/solutions" type="FAILURE">
-<![CDATA[  [Chromium] › ..\utils\helpers\spellCheckerUtils.js:86:13 › Spell Check for All Links › Check spelling on link 3 of 9: https://www.blueparadox.com/en/solutions 
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 4
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-249c7-lueparadox-com-en-solutions-Chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-249c7-lueparadox-com-en-solutions-Chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-249c7-lueparadox-com-en-solutions-Chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 4
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-249c7-lueparadox-com-en-solutions-Chromium-retry1\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-249c7-lueparadox-com-en-solutions-Chromium-retry1\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-249c7-lueparadox-com-en-solutions-Chromium-retry1\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/en/solutions: single-use, adchoices, johnson, ourprivacy
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-249c7-lueparadox-com-en-solutions-Chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-249c7-lueparadox-com-en-solutions-Chromium\trace.zip]]
-
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/en/solutions: single-use, adchoices, johnson, ourprivacy
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-249c7-lueparadox-com-en-solutions-Chromium-retry1\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-249c7-lueparadox-com-en-solutions-Chromium-retry1\trace.zip]]
-]]>
-</system-out>
-</testcase>
-<testcase name="Spell Check for All Links › Check spelling on link 4 of 9: https://www.blueparadox.com/en/resources" classname="spellcheckerTest.spec.js" time="13.594">
-<failure message="spellCheckerUtils.js:86:13 Check spelling on link 4 of 9: https://www.blueparadox.com/en/resources" type="FAILURE">
-<![CDATA[  [Chromium] › ..\utils\helpers\spellCheckerUtils.js:86:13 › Spell Check for All Links › Check spelling on link 4 of 9: https://www.blueparadox.com/en/resources 
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 16
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-c3d8a-lueparadox-com-en-resources-Chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-c3d8a-lueparadox-com-en-resources-Chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-c3d8a-lueparadox-com-en-resources-Chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 16
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-c3d8a-lueparadox-com-en-resources-Chromium-retry1\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-c3d8a-lueparadox-com-en-resources-Chromium-retry1\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-c3d8a-lueparadox-com-en-resources-Chromium-retry1\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/en/resources: do-it-yourself, epa's, non-profits, 350, 100000, america's, iucn, 450, 2000, plastic-free, 075, microplastic, microplastics, adchoices, johnson, ourprivacy
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-c3d8a-lueparadox-com-en-resources-Chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-c3d8a-lueparadox-com-en-resources-Chromium\trace.zip]]
-
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/en/resources: do-it-yourself, epa's, non-profits, 350, 100000, america's, iucn, 450, 2000, plastic-free, 075, microplastic, microplastics, adchoices, johnson, ourprivacy
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-c3d8a-lueparadox-com-en-resources-Chromium-retry1\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-c3d8a-lueparadox-com-en-resources-Chromium-retry1\trace.zip]]
-]]>
-</system-out>
-</testcase>
-<testcase name="Spell Check for All Links › Check spelling on link 5 of 9: https://www.blueparadox.com/en/in-the-news" classname="spellcheckerTest.spec.js" time="13.363">
-<failure message="spellCheckerUtils.js:86:13 Check spelling on link 5 of 9: https://www.blueparadox.com/en/in-the-news" type="FAILURE">
-<![CDATA[  [Chromium] › ..\utils\helpers\spellCheckerUtils.js:86:13 › Spell Check for All Links › Check spelling on link 5 of 9: https://www.blueparadox.com/en/in-the-news 
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 31
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-71754-eparadox-com-en-in-the-news-Chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-71754-eparadox-com-en-in-the-news-Chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-71754-eparadox-com-en-in-the-news-Chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 31
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-71754-eparadox-com-en-in-the-news-Chromium-retry1\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-71754-eparadox-com-en-in-the-news-Chromium-retry1\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-71754-eparadox-com-en-in-the-news-Chromium-retry1\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/en/in-the-news: newsweek, epr, sc, johnson, ceo, fisk, washington, dc, right-to-repair, los, angeles, nanoplastic, microplastics, cnn, 40, york, ceo's, 'a, move', racine, cbs, durbin, d-illinois, tmj4com, hands-on, 'blue, paradox', axios, wgn, adchoices, ourprivacy
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-71754-eparadox-com-en-in-the-news-Chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-71754-eparadox-com-en-in-the-news-Chromium\trace.zip]]
-
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/en/in-the-news: newsweek, epr, sc, johnson, ceo, fisk, washington, dc, right-to-repair, los, angeles, nanoplastic, microplastics, cnn, 40, york, ceo's, 'a, move', racine, cbs, durbin, d-illinois, tmj4com, hands-on, 'blue, paradox', axios, wgn, adchoices, ourprivacy
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-71754-eparadox-com-en-in-the-news-Chromium-retry1\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-71754-eparadox-com-en-in-the-news-Chromium-retry1\trace.zip]]
-]]>
-</system-out>
-</testcase>
-<testcase name="Spell Check for All Links › Check spelling on link 6 of 9: https://www.blueparadox.com/en/the-exhibit" classname="spellcheckerTest.spec.js" time="13.445">
-<failure message="spellCheckerUtils.js:86:13 Check spelling on link 6 of 9: https://www.blueparadox.com/en/the-exhibit" type="FAILURE">
-<![CDATA[  [Chromium] › ..\utils\helpers\spellCheckerUtils.js:86:13 › Spell Check for All Links › Check spelling on link 6 of 9: https://www.blueparadox.com/en/the-exhibit 
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 14
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-66eff-eparadox-com-en-the-exhibit-Chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-66eff-eparadox-com-en-the-exhibit-Chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-66eff-eparadox-com-en-the-exhibit-Chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 14
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-66eff-eparadox-com-en-the-exhibit-Chromium-retry1\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-66eff-eparadox-com-en-the-exhibit-Chromium-retry1\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-66eff-eparadox-com-en-the-exhibit-Chromium-retry1\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/en/the-exhibit: midwest, lead-in, 1278, robson, olson, surfacesdrawing, imageryfrom, one-size-fits-all, mass-produced, real-time, clean-ups, adchoices, johnson, ourprivacy
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-66eff-eparadox-com-en-the-exhibit-Chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-66eff-eparadox-com-en-the-exhibit-Chromium\trace.zip]]
-
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/en/the-exhibit: midwest, lead-in, 1278, robson, olson, surfacesdrawing, imageryfrom, one-size-fits-all, mass-produced, real-time, clean-ups, adchoices, johnson, ourprivacy
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-66eff-eparadox-com-en-the-exhibit-Chromium-retry1\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-66eff-eparadox-com-en-the-exhibit-Chromium-retry1\trace.zip]]
-]]>
-</system-out>
-</testcase>
-<testcase name="Spell Check for All Links › Check spelling on link 7 of 9: https://www.blueparadox.com/en/about-the-movement" classname="spellcheckerTest.spec.js" time="12.656">
-<failure message="spellCheckerUtils.js:86:13 Check spelling on link 7 of 9: https://www.blueparadox.com/en/about-the-movement" type="FAILURE">
-<![CDATA[  [Chromium] › ..\utils\helpers\spellCheckerUtils.js:86:13 › Spell Check for All Links › Check spelling on link 7 of 9: https://www.blueparadox.com/en/about-the-movement 
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 3
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-6f763-x-com-en-about-the-movement-Chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-6f763-x-com-en-about-the-movement-Chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-6f763-x-com-en-about-the-movement-Chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 3
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-6f763-x-com-en-about-the-movement-Chromium-retry1\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-6f763-x-com-en-about-the-movement-Chromium-retry1\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-6f763-x-com-en-about-the-movement-Chromium-retry1\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/en/about-the-movement: midwest, sc, johnson
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-6f763-x-com-en-about-the-movement-Chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-6f763-x-com-en-about-the-movement-Chromium\trace.zip]]
-
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/en/about-the-movement: midwest, sc, johnson
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-6f763-x-com-en-about-the-movement-Chromium-retry1\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-6f763-x-com-en-about-the-movement-Chromium-retry1\trace.zip]]
-]]>
-</system-out>
-</testcase>
-<testcase name="Spell Check for All Links › Check spelling on link 8 of 9: https://www.blueparadox.com/en/take-action" classname="spellcheckerTest.spec.js" time="12.063">
-<failure message="spellCheckerUtils.js:86:13 Check spelling on link 8 of 9: https://www.blueparadox.com/en/take-action" type="FAILURE">
-<![CDATA[  [Chromium] › ..\utils\helpers\spellCheckerUtils.js:86:13 › Spell Check for All Links › Check spelling on link 8 of 9: https://www.blueparadox.com/en/take-action 
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 7
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-fddd8-eparadox-com-en-take-action-Chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-fddd8-eparadox-com-en-take-action-Chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-fddd8-eparadox-com-en-take-action-Chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 5
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-fddd8-eparadox-com-en-take-action-Chromium-retry1\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-fddd8-eparadox-com-en-take-action-Chromium-retry1\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-fddd8-eparadox-com-en-take-action-Chromium-retry1\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/en/take-action: 292, dont, 2030, 14, adchoices, johnson, ourprivacy
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-fddd8-eparadox-com-en-take-action-Chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-fddd8-eparadox-com-en-take-action-Chromium\trace.zip]]
-
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/en/take-action: 292, dont, 2030, 14, johnson
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-fddd8-eparadox-com-en-take-action-Chromium-retry1\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-fddd8-eparadox-com-en-take-action-Chromium-retry1\trace.zip]]
-]]>
-</system-out>
-</testcase>
-<testcase name="Spell Check for All Links › Check spelling on link 9 of 9: https://www.blueparadox.com/#calculatorModal" classname="spellcheckerTest.spec.js" time="12.75">
-<failure message="spellCheckerUtils.js:86:13 Check spelling on link 9 of 9: https://www.blueparadox.com/#calculatorModal" type="FAILURE">
-<![CDATA[  [Chromium] › ..\utils\helpers\spellCheckerUtils.js:86:13 › Spell Check for All Links › Check spelling on link 9 of 9: https://www.blueparadox.com/#calculatorModal 
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 4
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-032c1-paradox-com-calculatorModal-Chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-032c1-paradox-com-calculatorModal-Chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-032c1-paradox-com-calculatorModal-Chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 4
-
-      90 |                         linksWithErrors.push({ link, misspelledWords });
-      91 |                     }
-    > 92 |                     expect.soft(misspelledWords.length).toBe(0, `Misspelled words found on ${link}: ${misspelledWords}`);
-         |                                                         ^
-      93 |                 } catch (error) {
-      94 |                     failedLinks.push(link);
-      95 |                     console.error(`Error checking link ${link}: ${error.message}`);
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\spellCheckerUtils.js:92:57
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-032c1-paradox-com-calculatorModal-Chromium-retry1\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\spellcheckerTest-Spell-Che-032c1-paradox-com-calculatorModal-Chromium-retry1\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\spellcheckerTest-Spell-Che-032c1-paradox-com-calculatorModal-Chromium-retry1\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/#calculatorModal: 14, adchoices, johnson, ourprivacy
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-032c1-paradox-com-calculatorModal-Chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-032c1-paradox-com-calculatorModal-Chromium\trace.zip]]
-
-========= SPELL CHECK SUMMARY =========
-✅ Total Links Checked: 9
-❌ Links with Spelling Errors: 1
-  - https://www.blueparadox.com/#calculatorModal: 14, adchoices, johnson, ourprivacy
-🛑 Links that Failed to Load: 0
-=======================================
-
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-032c1-paradox-com-calculatorModal-Chromium-retry1\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\spellcheckerTest-Spell-Che-032c1-paradox-com-calculatorModal-Chromium-retry1\trace.zip]]
 ]]>
 </system-out>
 </testcase>
