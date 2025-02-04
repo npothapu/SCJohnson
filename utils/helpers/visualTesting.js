@@ -1,13 +1,29 @@
 /**
  * Author: Nandakumar Pothapu Reddy
  * Title: Associate Director of Technology
- * Date: January 30, 2025
+ * Date: February 4, 2025
  */
 
 const path = require("path");
 const fs = require("fs");
 const resemble = require("resemblejs");
-require("dotenv").config({ path: path.resolve(__dirname, `../../env/.env.${process.env.ENV || 'dev'}`) });
+const dotenv = require("dotenv");
+
+// Load environment variables safely
+const envPath = path.resolve(__dirname, `../../env/.env.${process.env.ENV || "dev"}`);
+dotenv.config({ path: envPath });
+
+// Validate required environment variables
+const requiredEnvVars = ["BASE_URL", "FOLDER_NAME"];
+requiredEnvVars.forEach((key) => {
+    if (!process.env[key]) {
+        console.warn(`⚠️ Missing required environment variable: ${key}`);
+    }
+});
+
+const BASE_URL = process.env.BASE_URL;
+const FOLDER_NAME = process.env.FOLDER_NAME;
+const FOLDER_PATH = path.resolve(__dirname, `../data/url_batches/${FOLDER_NAME}`);
 
 /**
  * Captures and compares a screenshot of the given page.
@@ -16,23 +32,19 @@ require("dotenv").config({ path: path.resolve(__dirname, `../../env/.env.${proce
  * @param {string} browserName - Browser name for screenshot comparison.
  */
 async function captureAndCompareScreenshot(page, testName, browserName) {
-    const baseUrl = process.env.BASE_URL;
-    if (!baseUrl) {
-        console.error(`❌ BASE_URL is not set in the environment file (.env.${process.env.ENV || 'dev'})`);
-        throw new Error("BASE_URL is missing in the environment configuration!");
+    if (!BASE_URL) {
+        throw new Error("❌ BASE_URL is missing in the environment configuration!");
     }
 
-    const outputDir = path.join(__dirname, "..", "screenshots"); // Updated path
-    if (!fs.existsSync(outputDir)) {
-        fs.mkdirSync(outputDir, { recursive: true });
-    }
+    const outputDir = path.join(__dirname, "..", "screenshots");
+    fs.mkdirSync(outputDir, { recursive: true });
 
     const baselineImagePath = path.join(outputDir, `${testName}_baseline.png`);
     const newImagePath = path.join(outputDir, `${testName}_${browserName}.png`);
 
-    await page.goto(baseUrl, { waitUntil: "domcontentloaded" });
+    await page.goto(BASE_URL, { waitUntil: "domcontentloaded" });
 
-    // Adjust viewport to capture full page height
+    // Adjust viewport for full-page capture
     const bodyHeight = await page.evaluate(() => document.body.scrollHeight);
     await page.setViewportSize({ width: 1920, height: Math.min(bodyHeight, 5000) });
 
@@ -50,16 +62,16 @@ async function captureAndCompareScreenshot(page, testName, browserName) {
 
     // Compare with baseline
     if (fs.existsSync(baselineImagePath)) {
-        resemble(fs.readFileSync(baselineImagePath))
-            .compareTo(fs.readFileSync(newImagePath))
-            .onComplete((data) => {
-                if (data.misMatchPercentage > 0) {
-                    console.error(`❌ Images differ by ${data.misMatchPercentage}%`);
-                    throw new Error("Visual mismatch detected!");
-                } else {
-                    console.log("✅ Screenshots match!");
-                }
-            });
+        const diff = await new Promise((resolve) => {
+            resemble(fs.readFileSync(baselineImagePath))
+                .compareTo(fs.readFileSync(newImagePath))
+                .onComplete(resolve);
+        });
+
+        if (diff.misMatchPercentage > 0) {
+            throw new Error(`❌ Visual mismatch detected! Images differ by ${diff.misMatchPercentage}%`);
+        }
+        console.log("✅ Screenshots match!");
     } else {
         console.warn("⚠️ Baseline image not found. Saving current screenshot as baseline.");
         fs.copyFileSync(newImagePath, baselineImagePath);

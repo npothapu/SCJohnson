@@ -136,17 +136,28 @@ Run tests for specific environments:
   ```sh
   ENV=dev npx playwright test
   ```
+  powershell command : $env:ENV="dev"; npx playwright test
+
 - **QA:**
   ```sh
   ENV=qa npx playwright test
+
+   powershell command : $env:ENV="qa"; npx playwright test
+
   ```
 - **Staging:**
   ```sh
   ENV=stage npx playwright test
+
+   powershell command : $env:ENV="stage"; npx playwright test
+
   ```
 - **Production:**
   ```sh
   ENV=prod npx playwright test
+
+   powershell command : $env:ENV="prod"; npx playwright test
+
   ```
 
 ### 🔹 Running Specific Browsers

@@ -5,7 +5,7 @@ const { defineConfig } = require('@playwright/test');
 module.exports = defineConfig({
     testDir: 'tests',   // Directory containing tests
     retries: 1,         // Retries failed tests up to 2 times
-    workers: process.env.CI ? 2 : undefined,  // Use 2 workers in CI, unlimited locally
+    workers: process.env.CI ? 4 : 10,  // Use 4 workers in CI, 10 locally
     timeout: 30 * 1000, // 30-second timeout per test
     
     use: {

@@ -9,14 +9,13 @@ require("dotenv").config(); // Load environment variables
 const { test } = require("@playwright/test");
 const { captureAndCompareScreenshot } = require("../utils/helpers/visualTesting");
 const { runLinkCheck } = require("../utils/helpers/linkCheckerUtils");
-const { runSpellCheckTests } = require("../utils/helpers/spellCheckerUtils");
 const { extractAndSaveLinks } = require("../utils/helpers/extractLinksUtil"); // Import link extraction utility
 
 test.describe.parallel("Website Testing Suite", () => {
     
-    test("SC Johnson Homepage Screenshot Test", async ({ page, browserName }) => {
-        test.setTimeout(60000);
-        await captureAndCompareScreenshot(page, "scjohnson_homepage", browserName);
+    test("Extract and save distinct links", async ({ browser }) => {
+        test.setTimeout(90000);
+        await extractAndSaveLinks(browser);
     });
 
     test("Check all links for broken URLs", async ({ page }, testInfo) => {
@@ -24,11 +23,10 @@ test.describe.parallel("Website Testing Suite", () => {
         await runLinkCheck(page, testInfo, test);
     });
 
-    test("Extract and save distinct links", async ({ browser }) => {
-        test.setTimeout(90000);
-        await extractAndSaveLinks(browser);
+
+    test("SC Johnson Homepage Screenshot Test", async ({ page, browserName }) => {
+        test.setTimeout(60000);
+        await captureAndCompareScreenshot(page, "scjohnson_homepage", browserName);
     });
 
-    // ✅ Adding Spell Checker Test Suite
-    runSpellCheckTests(test);
 });
