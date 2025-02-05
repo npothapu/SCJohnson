@@ -1,11 +1,12 @@
-<testsuites id="" name="" tests="5" failures="2" skipped="0" errors="0" time="79.056388">
-<testsuite name="main.spec.js" timestamp="2025-02-04T23:34:35.259Z" hostname="Chromium" tests="5" failures="2" skipped="0" time="156.061" errors="0">
-<testcase name="Website Testing Suite › Extract and save distinct links" classname="main.spec.js" time="10.906">
+<testsuites id="" name="" tests="5" failures="2" skipped="0" errors="0" time="88.93257700000001">
+<testsuite name="main.spec.js" timestamp="2025-02-05T18:25:45.167Z" hostname="Chromium" tests="5" failures="2" skipped="0" time="178.857" errors="0">
+<testcase name="Website Testing Suite › Extract and save distinct links - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" classname="main.spec.js" time="16.433">
 <system-out>
-<![CDATA[Navigating to URL: https://www.blueparadox.com/
+<![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-14
+Navigating to URL: https://www.blueparadox.com/
 Extracted 9 unique links.
 
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-Extract-and-save-distinct-links-Chromium\test-finished-1.png]]
+[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-95638-b-biz-browse-VYRNASCJBP-14--Chromium\test-finished-1.png]]
 ]]>
 </system-out>
 <system-err>
@@ -13,9 +14,9 @@ Extracted 9 unique links.
 ]]>
 </system-err>
 </testcase>
-<testcase name="Website Testing Suite › Check all links for broken URLs" classname="main.spec.js" time="35.292">
-<failure message="main.spec.js:16:5 Check all links for broken URLs" type="FAILURE">
-<![CDATA[  [Chromium] › main.spec.js:16:5 › Website Testing Suite › Check all links for broken URLs ─────────
+<testcase name="Website Testing Suite › Check all links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" classname="main.spec.js" time="38.759">
+<failure message="main.spec.js:34:5 Check all links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" type="FAILURE">
+<![CDATA[  [Chromium] › main.spec.js:34:5 › Website Testing Suite › Check all links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14] 
 
     Error: https://www.facebook.com/theblueparadox returned a non-success status code
 
@@ -35,7 +36,7 @@ Extracted 9 unique links.
         at C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:56:89
         at checkLinks (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:53:9)
         at runLinkCheck (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:115:42)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:18:9
+        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:37:9
 
     Error: Some links returned errors
 
@@ -55,7 +56,7 @@ Extracted 9 unique links.
       97 | /**
         at logTestSummary (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:94:67)
         at runLinkCheck (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:121:5)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:18:9
+        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:37:9
 
     attachment #1: checked-links.txt (text/plain) ──────────────────────────────────────────────────
     https://www.blueparadox.com/
@@ -69,14 +70,14 @@ Extracted 9 unique links.
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-Check-all-links-for-broken-URLs-Chromium\test-failed-1.png
+    test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium\test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-Check-all-links-for-broken-URLs-Chromium\trace.zip
+    test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium\trace.zip
     Usage:
 
-        npx playwright show-trace test-results\main-Website-Testing-Suite-Check-all-links-for-broken-URLs-Chromium\trace.zip
+        npx playwright show-trace test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium\trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
@@ -100,7 +101,7 @@ Extracted 9 unique links.
         at C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:56:89
         at checkLinks (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:53:9)
         at runLinkCheck (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:115:42)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:18:9
+        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:37:9
 
     Error: Some links returned errors
 
@@ -120,7 +121,7 @@ Extracted 9 unique links.
       97 | /**
         at logTestSummary (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:94:67)
         at runLinkCheck (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:121:5)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:18:9
+        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:37:9
 
     attachment #1: checked-links.txt (text/plain) ──────────────────────────────────────────────────
     https://www.blueparadox.com/
@@ -134,20 +135,21 @@ Extracted 9 unique links.
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-Check-all-links-for-broken-URLs-Chromium-retry1\test-failed-1.png
+    test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium-retry1\test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-Check-all-links-for-broken-URLs-Chromium-retry1\trace.zip
+    test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium-retry1\trace.zip
     Usage:
 
-        npx playwright show-trace test-results\main-Website-Testing-Suite-Check-all-links-for-broken-URLs-Chromium-retry1\trace.zip
+        npx playwright show-trace test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium-retry1\trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
 </failure>
 <system-out>
-<![CDATA[🔍 Running tests for environment: qa
+<![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-14
+🔍 Running tests for environment: qa
 🌍 Testing BASE_URL: https://www.blueparadox.com/
 🔗 Total Links Found: 20
 
@@ -158,9 +160,10 @@ Extracted 9 unique links.
 ❌ Failed URLs:
 https://www.facebook.com/theblueparadox
 
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-Check-all-links-for-broken-URLs-Chromium\test-failed-1.png]]
+[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium\test-failed-1.png]]
 
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-Check-all-links-for-broken-URLs-Chromium\trace.zip]]
+[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium\trace.zip]]
+Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-14
 🔍 Running tests for environment: qa
 🌍 Testing BASE_URL: https://www.blueparadox.com/
 🔗 Total Links Found: 14
@@ -172,15 +175,16 @@ https://www.facebook.com/theblueparadox
 ❌ Failed URLs:
 https://www.facebook.com/theblueparadox
 
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-Check-all-links-for-broken-URLs-Chromium-retry1\test-failed-1.png]]
+[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium-retry1\test-failed-1.png]]
 
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-Check-all-links-for-broken-URLs-Chromium-retry1\trace.zip]]
+[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium-retry1\trace.zip]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="Website Testing Suite › Check all footer links for broken URLs" classname="main.spec.js" time="22.717">
+<testcase name="Website Testing Suite › Check all footer links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-9]" classname="main.spec.js" time="23.038">
 <system-out>
-<![CDATA[Total Footer links found: 14
+<![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-9
+Total Footer links found: 14
 Working link in Footer: https://www.instagram.com/theblueparadox (Status: 200)
 Working link in Footer: https://twitter.com/theblueparadox (Status: 200)
 Working link in Footer: /en/plastic-waste-crisis (Status: 200)
@@ -199,7 +203,7 @@ Footer Test Summary:
 Total Working Links: 13
 Total Broken Links: 1
 
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-d9242-ooter-links-for-broken-URLs-Chromium\test-finished-1.png]]
+[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-bd775-ub-biz-browse-VYRNASCJBP-9--Chromium\test-finished-1.png]]
 ]]>
 </system-out>
 <system-err>
@@ -207,23 +211,24 @@ Total Broken Links: 1
 ]]>
 </system-err>
 </testcase>
-<testcase name="Website Testing Suite › Check all header links for broken URLs" classname="main.spec.js" time="13.815">
+<testcase name="Website Testing Suite › Check all header links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-11]" classname="main.spec.js" time="17.606">
 <system-out>
-<![CDATA[Total Header links found: 0
+<![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-11
+Total Header links found: 0
 
 Header Test Summary:
 Total Working Links: 0
 Total Broken Links: 0
 
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-2588c-eader-links-for-broken-URLs-Chromium\test-finished-1.png]]
+[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-2e2ad-b-biz-browse-VYRNASCJBP-11--Chromium\test-finished-1.png]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="Website Testing Suite › SC Johnson Homepage Screenshot Test" classname="main.spec.js" time="73.331">
-<failure message="main.spec.js:31:5 SC Johnson Homepage Screenshot Test" type="FAILURE">
-<![CDATA[  [Chromium] › main.spec.js:31:5 › Website Testing Suite › SC Johnson Homepage Screenshot Test ─────
+<testcase name="Website Testing Suite › SC Johnson Homepage Screenshot Test - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-3]" classname="main.spec.js" time="83.021">
+<failure message="main.spec.js:53:5 SC Johnson Homepage Screenshot Test - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-3]" type="FAILURE">
+<![CDATA[  [Chromium] › main.spec.js:53:5 › Website Testing Suite › SC Johnson Homepage Screenshot Test - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-3] 
 
-    Error: ❌ Visual mismatch detected! Images differ by 98.48%
+    Error: ❌ Visual mismatch detected! Images differ by 98.53%
 
        at ..\utils\helpers\visualTesting.js:72
 
@@ -235,23 +240,23 @@ Total Broken Links: 0
       74 |         console.log("✅ Screenshots match!");
       75 |     } else {
         at captureAndCompareScreenshot (C:\2025Playwright-Projects\SCJohnson\utils\helpers\visualTesting.js:72:19)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:33:9
+        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:56:9
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-34327-on-Homepage-Screenshot-Test-Chromium\test-failed-1.png
+    test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium\test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-34327-on-Homepage-Screenshot-Test-Chromium\trace.zip
+    test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium\trace.zip
     Usage:
 
-        npx playwright show-trace test-results\main-Website-Testing-Suite-34327-on-Homepage-Screenshot-Test-Chromium\trace.zip
+        npx playwright show-trace test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium\trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
 
-    Error: ❌ Visual mismatch detected! Images differ by 98.51%
+    Error: ❌ Visual mismatch detected! Images differ by 98.53%
 
        at ..\utils\helpers\visualTesting.js:72
 
@@ -263,32 +268,34 @@ Total Broken Links: 0
       74 |         console.log("✅ Screenshots match!");
       75 |     } else {
         at captureAndCompareScreenshot (C:\2025Playwright-Projects\SCJohnson\utils\helpers\visualTesting.js:72:19)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:33:9
+        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:56:9
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-34327-on-Homepage-Screenshot-Test-Chromium-retry1\test-failed-1.png
+    test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium-retry1\test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-34327-on-Homepage-Screenshot-Test-Chromium-retry1\trace.zip
+    test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium-retry1\trace.zip
     Usage:
 
-        npx playwright show-trace test-results\main-Website-Testing-Suite-34327-on-Homepage-Screenshot-Test-Chromium-retry1\trace.zip
+        npx playwright show-trace test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium-retry1\trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
 </failure>
 <system-out>
-<![CDATA[📸 Screenshot saved at: C:\2025Playwright-Projects\SCJohnson\utils\screenshots\scjohnson_homepage_chromium.png
-
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-34327-on-Homepage-Screenshot-Test-Chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-34327-on-Homepage-Screenshot-Test-Chromium\trace.zip]]
+<![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-3
 📸 Screenshot saved at: C:\2025Playwright-Projects\SCJohnson\utils\screenshots\scjohnson_homepage_chromium.png
 
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-34327-on-Homepage-Screenshot-Test-Chromium-retry1\test-failed-1.png]]
+[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium\test-failed-1.png]]
 
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-34327-on-Homepage-Screenshot-Test-Chromium-retry1\trace.zip]]
+[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium\trace.zip]]
+Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-3
+📸 Screenshot saved at: C:\2025Playwright-Projects\SCJohnson\utils\screenshots\scjohnson_homepage_chromium.png
+
+[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium-retry1\trace.zip]]
 ]]>
 </system-out>
 </testcase>
