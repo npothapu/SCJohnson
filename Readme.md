@@ -34,6 +34,7 @@ npm install typo-js playwright-html-reporter dotenv csv-parser
 #### For image comparison:
 ```sh
 npm install resemblejs canvas
+
 ```
 #### OS-Specific Dependencies:
 - **Windows:**

@@ -1,6 +1,6 @@
-<testsuites id="" name="" tests="5" failures="2" skipped="0" errors="0" time="88.93257700000001">
-<testsuite name="main.spec.js" timestamp="2025-02-05T18:25:45.167Z" hostname="Chromium" tests="5" failures="2" skipped="0" time="178.857" errors="0">
-<testcase name="Website Testing Suite › Extract and save distinct links - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" classname="main.spec.js" time="16.433">
+<testsuites id="" name="" tests="5" failures="2" skipped="0" errors="0" time="87.82343800000001">
+<testsuite name="main.spec.js" timestamp="2025-02-05T22:20:30.411Z" hostname="Chromium" tests="5" failures="2" skipped="0" time="163.403" errors="0">
+<testcase name="Website Testing Suite › Extract and save distinct links - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" classname="main.spec.js" time="9.644">
 <system-out>
 <![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-14
 Navigating to URL: https://www.blueparadox.com/
@@ -14,7 +14,7 @@ Extracted 9 unique links.
 ]]>
 </system-err>
 </testcase>
-<testcase name="Website Testing Suite › Check all links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" classname="main.spec.js" time="38.759">
+<testcase name="Website Testing Suite › Check all links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" classname="main.spec.js" time="41.242">
 <failure message="main.spec.js:34:5 Check all links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" type="FAILURE">
 <![CDATA[  [Chromium] › main.spec.js:34:5 › Website Testing Suite › Check all links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14] 
 
@@ -166,11 +166,11 @@ https://www.facebook.com/theblueparadox
 Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-14
 🔍 Running tests for environment: qa
 🌍 Testing BASE_URL: https://www.blueparadox.com/
-🔗 Total Links Found: 14
+🔗 Total Links Found: 20
 
 === ✅ Link Check Summary ✅ ===
-🔗 Total Links Checked: 14
-✅ Passed Links: 13
+🔗 Total Links Checked: 20
+✅ Passed Links: 19
 ❌ Failed Links: 1
 ❌ Failed URLs:
 https://www.facebook.com/theblueparadox
@@ -181,7 +181,7 @@ https://www.facebook.com/theblueparadox
 ]]>
 </system-out>
 </testcase>
-<testcase name="Website Testing Suite › Check all footer links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-9]" classname="main.spec.js" time="23.038">
+<testcase name="Website Testing Suite › Check all footer links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-9]" classname="main.spec.js" time="19.94">
 <system-out>
 <![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-9
 Total Footer links found: 14
@@ -211,7 +211,7 @@ Total Broken Links: 1
 ]]>
 </system-err>
 </testcase>
-<testcase name="Website Testing Suite › Check all header links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-11]" classname="main.spec.js" time="17.606">
+<testcase name="Website Testing Suite › Check all header links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-11]" classname="main.spec.js" time="12.021">
 <system-out>
 <![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-11
 Total Header links found: 0
@@ -224,22 +224,23 @@ Total Broken Links: 0
 ]]>
 </system-out>
 </testcase>
-<testcase name="Website Testing Suite › SC Johnson Homepage Screenshot Test - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-3]" classname="main.spec.js" time="83.021">
+<testcase name="Website Testing Suite › SC Johnson Homepage Screenshot Test - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-3]" classname="main.spec.js" time="80.556">
 <failure message="main.spec.js:53:5 SC Johnson Homepage Screenshot Test - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-3]" type="FAILURE">
 <![CDATA[  [Chromium] › main.spec.js:53:5 › Website Testing Suite › SC Johnson Homepage Screenshot Test - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-3] 
 
-    Error: ❌ Visual mismatch detected! Images differ by 98.53%
+    Error: ❌ Visual mismatch detected! Images differ by 4.07%
+    🔍 Review the report at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\scjohnson_homepage_report.html
 
-       at ..\utils\helpers\visualTesting.js:72
+       at ..\utils\helpers\visualTesting.js:147
 
-      70 |
-      71 |         if (diff.misMatchPercentage > 0) {
-    > 72 |             throw new Error(`❌ Visual mismatch detected! Images differ by ${diff.misMatchPercentage}%`);
-         |                   ^
-      73 |         }
-      74 |         console.log("✅ Screenshots match!");
-      75 |     } else {
-        at captureAndCompareScreenshot (C:\2025Playwright-Projects\SCJohnson\utils\helpers\visualTesting.js:72:19)
+      145 |
+      146 |     if (diff.misMatchPercentage > 0) {
+    > 147 |         throw new Error(`❌ Visual mismatch detected! Images differ by ${diff.misMatchPercentage}%\n🔍 Review the report at: ${reportPath}`);
+          |               ^
+      148 |     }
+      149 |     console.log("✅ Screenshots match!");
+      150 | }
+        at captureAndCompareScreenshot (C:\2025Playwright-Projects\SCJohnson\utils\helpers\visualTesting.js:147:15)
         at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:56:9
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
@@ -256,18 +257,19 @@ Total Broken Links: 0
 
     Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
 
-    Error: ❌ Visual mismatch detected! Images differ by 98.53%
+    Error: ❌ Visual mismatch detected! Images differ by 4.09%
+    🔍 Review the report at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\scjohnson_homepage_report.html
 
-       at ..\utils\helpers\visualTesting.js:72
+       at ..\utils\helpers\visualTesting.js:147
 
-      70 |
-      71 |         if (diff.misMatchPercentage > 0) {
-    > 72 |             throw new Error(`❌ Visual mismatch detected! Images differ by ${diff.misMatchPercentage}%`);
-         |                   ^
-      73 |         }
-      74 |         console.log("✅ Screenshots match!");
-      75 |     } else {
-        at captureAndCompareScreenshot (C:\2025Playwright-Projects\SCJohnson\utils\helpers\visualTesting.js:72:19)
+      145 |
+      146 |     if (diff.misMatchPercentage > 0) {
+    > 147 |         throw new Error(`❌ Visual mismatch detected! Images differ by ${diff.misMatchPercentage}%\n🔍 Review the report at: ${reportPath}`);
+          |               ^
+      148 |     }
+      149 |     console.log("✅ Screenshots match!");
+      150 | }
+        at captureAndCompareScreenshot (C:\2025Playwright-Projects\SCJohnson\utils\helpers\visualTesting.js:147:15)
         at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:56:9
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
@@ -285,13 +287,17 @@ Total Broken Links: 0
 </failure>
 <system-out>
 <![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-3
-📸 Screenshot saved at: C:\2025Playwright-Projects\SCJohnson\utils\screenshots\scjohnson_homepage_chromium.png
+📸 New screenshot saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\current_snapshots\scjohnson_homepage_chromium.png
+📊 Diff image saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\diffs\scjohnson_homepage_diff.png
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\scjohnson_homepage_report.html
 
 [[ATTACHMENT|..\test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium\test-failed-1.png]]
 
 [[ATTACHMENT|..\test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium\trace.zip]]
 Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-3
-📸 Screenshot saved at: C:\2025Playwright-Projects\SCJohnson\utils\screenshots\scjohnson_homepage_chromium.png
+📸 New screenshot saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\current_snapshots\scjohnson_homepage_chromium.png
+📊 Diff image saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\diffs\scjohnson_homepage_diff.png
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\scjohnson_homepage_report.html
 
 [[ATTACHMENT|..\test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium-retry1\test-failed-1.png]]
 
