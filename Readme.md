@@ -34,8 +34,38 @@ npm install typo-js playwright-html-reporter dotenv csv-parser
 #### For image comparison:
 ```sh
 npm install resemblejs canvas
+```
+
+#### Install Lighthouse, chrome-launcher, playwright, and fs
+```sh
+npm install lighthouse chrome-launcher playwright fs
+```
+
+#### Define the script in package.json
+```json
+"scripts": {
+  "lighthouse": "node utils/lighthouse/lighthouse-playwright.js"
+}
+```
+
+#### Run Lighthouse tests
+```sh
+npm run lighthouse -- https://your-website.com
+```
+Or using Node:
+```sh
+node lighthouse-playwright.js https://your-website.com
+```
+
+#### To run reports
+Open `lighthouse-report.html` using:
+```sh
+start utils/lighthouse/reports/lighthouse-report.html
+or
+npm run open-lighthouse-report
 
 ```
+
 #### OS-Specific Dependencies:
 - **Windows:**
   ```sh
@@ -116,6 +146,15 @@ utils/
 │   │── vml/
 │   │── teenvoice/
 │
+│── lighthouse/
+│   │── lighthouse-playwright.js   # Lighthouse automation script
+│
+│── visual_tests/
+│   │── baseline_snapshots/   # Baseline images for comparison
+│   │── current_snapshots/    # Current test run images
+│   │── diffs/                # Differences between baseline and current images
+│   │── reports/              # Visual testing reports
+│
 │── helpers/
 │   │── extractLinksUtil.js    # Utility for extracting links
 │   │── linkCheckerUtils.js    # Utilities for link checking
@@ -137,28 +176,36 @@ Run tests for specific environments:
   ```sh
   ENV=dev npx playwright test
   ```
-  powershell command : $env:ENV="dev"; npx playwright test
+  **PowerShell Command:**
+  ```sh
+  $env:ENV="dev"; npx playwright test
+  ```
 
 - **QA:**
   ```sh
   ENV=qa npx playwright test
-
-   powershell command : $env:ENV="qa"; npx playwright test
-
   ```
+  **PowerShell Command:**
+  ```sh
+  $env:ENV="qa"; npx playwright test
+  ```
+
 - **Staging:**
   ```sh
   ENV=stage npx playwright test
-
-   powershell command : $env:ENV="stage"; npx playwright test
-
   ```
+  **PowerShell Command:**
+  ```sh
+  $env:ENV="stage"; npx playwright test
+  ```
+
 - **Production:**
   ```sh
   ENV=prod npx playwright test
-
-   powershell command : $env:ENV="prod"; npx playwright test
-
+  ```
+  **PowerShell Command:**
+  ```sh
+  $env:ENV="prod"; npx playwright test
   ```
 
 ### 🔹 Running Specific Browsers
@@ -180,3 +227,4 @@ CI=true ENV=qa npx playwright test
 
 ## 🎯 Conclusion
 You are now ready to use Playwright for automated testing and visual verification. Modify the script as needed to fit your testing requirements. 🚀
+
