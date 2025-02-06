@@ -25,7 +25,13 @@ function readUrlsFromJsonFiles(directory) {
     return urls;
 }
 
+// Function to run Lighthouse for both desktop and mobile
 async function runLighthouse(url, retries = 3) {
+    const configs = [
+        { name: 'desktop', config: { extends: 'lighthouse:default', settings: { emulatedFormFactor: 'desktop' } } },
+        { name: 'mobile', config: { extends: 'lighthouse:default', settings: { emulatedFormFactor: 'mobile' } } }
+    ];
+
     let attempt = 0;
     while (attempt < retries) {
         try {
@@ -39,24 +45,27 @@ async function runLighthouse(url, retries = 3) {
 
             // Launch Chrome separately for Lighthouse
             const chrome = await launch({ chromeFlags: ['--headless'] });
-            const options = { logLevel: 'info', output: 'html', port: chrome.port };
 
-            // Run Lighthouse audit
-            const result = await lighthouse.default(url, options, null);
+            for (const { name, config } of configs) {
+                const options = { logLevel: 'info', output: 'html', port: chrome.port, config };
 
-            // Ensure the reports directory exists
-            const outputDir = path.join(__dirname, 'reports');
-            if (!fs.existsSync(outputDir)) {
-                fs.mkdirSync(outputDir, { recursive: true });
+                // Run Lighthouse audit
+                const result = await lighthouse.default(url, options, null);
+
+                // Ensure the reports directory exists
+                const outputDir = path.join(__dirname, 'reports');
+                if (!fs.existsSync(outputDir)) {
+                    fs.mkdirSync(outputDir, { recursive: true });
+                }
+
+                // Define the output path using the URL and config name as part of the filename
+                const sanitizedUrl = url.replace(/[^a-zA-Z0-9]/g, '_');
+                const outputPath = path.join(outputDir, `lighthouse-report-${sanitizedUrl}-${name}.html`);
+
+                // Save the report
+                fs.writeFileSync(outputPath, result.report);
+                console.log(`Lighthouse report for ${url} (${name}) saved as ${outputPath}`);
             }
-
-            // Define the output path using the URL as part of the filename
-            const sanitizedUrl = url.replace(/[^a-zA-Z0-9]/g, '_');
-            const outputPath = path.join(outputDir, `lighthouse-report-${sanitizedUrl}.html`);
-
-            // Save the report
-            fs.writeFileSync(outputPath, result.report);
-            console.log(`Lighthouse report for ${url} saved as ${outputPath}`);
 
             await browser.close();
             await chrome.kill();
