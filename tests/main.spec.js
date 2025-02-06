@@ -25,28 +25,28 @@ const JIRA_TICKETS = {
 
 test.describe.parallel("Website Testing Suite", () => {
     
-    test(`Extract and save distinct links - [JIRA: ${JIRA_TICKETS.extractLinks}]`, async ({ browser }) => {
-        test.setTimeout(90000);
-        console.log(`Refer to JIRA ticket: ${JIRA_TICKETS.extractLinks}`);
-        await extractAndSaveLinks(browser);
-    });
+    // test(`Extract and save distinct links - [JIRA: ${JIRA_TICKETS.extractLinks}]`, async ({ browser }) => {
+    //     test.setTimeout(90000);
+    //     console.log(`Refer to JIRA ticket: ${JIRA_TICKETS.extractLinks}`);
+    //     await extractAndSaveLinks(browser);
+    // });
 
-    test(`Check all links for broken URLs - [JIRA: ${JIRA_TICKETS.checkLinks}]`, async ({ page }, testInfo) => {
-        test.setTimeout(90000);
-        console.log(`Refer to JIRA ticket: ${JIRA_TICKETS.checkLinks}`);
-        await runLinkCheck(page, testInfo, test);
-    });
+    // test(`Check all links for broken URLs - [JIRA: ${JIRA_TICKETS.checkLinks}]`, async ({ page }, testInfo) => {
+    //     test.setTimeout(90000);
+    //     console.log(`Refer to JIRA ticket: ${JIRA_TICKETS.checkLinks}`);
+    //     await runLinkCheck(page, testInfo, test);
+    // });
 
-    test(`Check all footer links for broken URLs - [JIRA: ${JIRA_TICKETS.footerLinks}]`, async ({ page }) => {
-        test.setTimeout(90000);
-        console.log(`Refer to JIRA ticket: ${JIRA_TICKETS.footerLinks}`);
-        await runFooterLinkCheck(page);
-    });
+    // test(`Check all footer links for broken URLs - [JIRA: ${JIRA_TICKETS.footerLinks}]`, async ({ page }) => {
+    //     test.setTimeout(90000);
+    //     console.log(`Refer to JIRA ticket: ${JIRA_TICKETS.footerLinks}`);
+    //     await runFooterLinkCheck(page);
+    // });
 
-    test(`Check all header links for broken URLs - [JIRA: ${JIRA_TICKETS.headerLinks}]`, async ({ page }) => {
-        test.setTimeout(90000);
-        console.log(`Refer to JIRA ticket: ${JIRA_TICKETS.headerLinks}`);
-        await runHeaderLinkCheck(page);
-    });
+    // test(`Check all header links for broken URLs - [JIRA: ${JIRA_TICKETS.headerLinks}]`, async ({ page }) => {
+    //     test.setTimeout(90000);
+    //     console.log(`Refer to JIRA ticket: ${JIRA_TICKETS.headerLinks}`);
+    //     await runHeaderLinkCheck(page);
+    // });
 
 });

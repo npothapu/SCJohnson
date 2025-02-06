@@ -1,230 +1,6 @@
-<testsuites id="" name="" tests="13" failures="1" skipped="0" errors="0" time="102.543176">
-<testsuite name="main.spec.js" timestamp="2025-02-06T04:44:48.799Z" hostname="Chromium" tests="4" failures="1" skipped="0" time="205.889" errors="0">
-<testcase name="Website Testing Suite › Extract and save distinct links - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" classname="main.spec.js" time="14.754">
-<system-out>
-<![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-14
-Navigating to URL: https://www.blueparadox.com/
-Extracted 9 unique links.
-]]>
-</system-out>
-<system-err>
-<![CDATA[Error during extraction: i is not defined
-]]>
-</system-err>
-</testcase>
-<testcase name="Website Testing Suite › Check all links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" classname="main.spec.js" time="80.764">
-<failure message="main.spec.js:34:5 Check all links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" type="FAILURE">
-<![CDATA[  [Chromium] › main.spec.js:34:5 › Website Testing Suite › Check all links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14] 
-
-    Error: https://www.facebook.com/theblueparadox returned a non-success status code
-
-    expect(received).toBeTruthy()
-
-    Received: false
-
-       at ..\utils\helpers\linkCheckerUtils.js:56
-
-      54 |             try {
-      55 |                 const response = await page.request.get(url);
-    > 56 |                 expect.soft(response.ok(), `${url} returned a non-success status code`).toBeTruthy();
-         |                                                                                         ^
-      57 |                 if (response.ok()) {
-      58 |                     passedLinks++;
-      59 |                 } else {
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:56:89
-        at checkLinks (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:53:9)
-        at runLinkCheck (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:115:42)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:37:9
-
-    Error: Some links returned errors
-
-    expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 1
-
-       at ..\utils\helpers\linkCheckerUtils.js:94
-
-      92 |
-      93 |     // Soft assert for failed links
-    > 94 |     expect.soft(failedLinks.length, "Some links returned errors").toBe(0);
-         |                                                                   ^
-      95 | }
-      96 |
-      97 | /**
-        at logTestSummary (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:94:67)
-        at runLinkCheck (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:121:5)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:37:9
-
-    attachment #1: checked-links.txt (text/plain) ──────────────────────────────────────────────────
-    https://www.blueparadox.com/
-    https://www.blueparadox.com/en/plastic-waste-crisis
-    https://www.blueparadox.com/en/solutions
-    https://www.blueparadox.com/en/resources
-    https://www.blueparadox.com/en/in-the-news
-    https://www.blueparadox.com/en/the-exhibit
-    https://www.blueparadox.com/en/about-the-movement
-    h...
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
-
-    Error: https://www.facebook.com/theblueparadox returned a non-success status code
-
-    expect(received).toBeTruthy()
-
-    Received: false
-
-       at ..\utils\helpers\linkCheckerUtils.js:56
-
-      54 |             try {
-      55 |                 const response = await page.request.get(url);
-    > 56 |                 expect.soft(response.ok(), `${url} returned a non-success status code`).toBeTruthy();
-         |                                                                                         ^
-      57 |                 if (response.ok()) {
-      58 |                     passedLinks++;
-      59 |                 } else {
-        at C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:56:89
-        at checkLinks (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:53:9)
-        at runLinkCheck (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:115:42)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:37:9
-
-    Error: Some links returned errors
-
-    expect(received).toBe(expected) // Object.is equality
-
-    Expected: 0
-    Received: 1
-
-       at ..\utils\helpers\linkCheckerUtils.js:94
-
-      92 |
-      93 |     // Soft assert for failed links
-    > 94 |     expect.soft(failedLinks.length, "Some links returned errors").toBe(0);
-         |                                                                   ^
-      95 | }
-      96 |
-      97 | /**
-        at logTestSummary (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:94:67)
-        at runLinkCheck (C:\2025Playwright-Projects\SCJohnson\utils\helpers\linkCheckerUtils.js:121:5)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:37:9
-
-    attachment #1: checked-links.txt (text/plain) ──────────────────────────────────────────────────
-    https://www.blueparadox.com/
-    https://www.blueparadox.com/en/plastic-waste-crisis
-    https://www.blueparadox.com/en/solutions
-    https://www.blueparadox.com/en/resources
-    https://www.blueparadox.com/en/in-the-news
-    https://www.blueparadox.com/en/the-exhibit
-    https://www.blueparadox.com/en/about-the-movement
-    h...
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium-retry1\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium-retry1\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium-retry1\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-14
-🔍 Running tests for environment: qa
-🌍 Testing BASE_URL: https://www.blueparadox.com/
-🔗 Total Links Found: 14
-
-=== ✅ Link Check Summary ✅ ===
-🔗 Total Links Checked: 14
-✅ Passed Links: 13
-❌ Failed Links: 1
-❌ Failed URLs:
-https://www.facebook.com/theblueparadox
-
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium\trace.zip]]
-Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-14
-🔍 Running tests for environment: qa
-🌍 Testing BASE_URL: https://www.blueparadox.com/
-🔗 Total Links Found: 14
-
-=== ✅ Link Check Summary ✅ ===
-🔗 Total Links Checked: 14
-✅ Passed Links: 13
-❌ Failed Links: 1
-❌ Failed URLs:
-https://www.facebook.com/theblueparadox
-
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium-retry1\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-f8503-b-biz-browse-VYRNASCJBP-14--Chromium-retry1\trace.zip]]
-]]>
-</system-out>
-</testcase>
-<testcase name="Website Testing Suite › Check all footer links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-9]" classname="main.spec.js" time="72.367">
-<system-out>
-<![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-9
-Total Footer links found: 14
-Working link in Footer: https://www.instagram.com/theblueparadox (Status: 200)
-Working link in Footer: https://twitter.com/theblueparadox (Status: 200)
-Working link in Footer: /en/plastic-waste-crisis (Status: 200)
-Working link in Footer: /en/solutions (Status: 200)
-Working link in Footer: /en/resources (Status: 200)
-Working link in Footer: /en/in-the-news (Status: 200)
-Working link in Footer: /en/the-exhibit (Status: 200)
-Working link in Footer: /en/about-the-movement (Status: 200)
-Working link in Footer: /en/take-action (Status: 200)
-Working link in Footer: #calculatorModal (Status: 200)
-Working link in Footer: https://terms.scjbrands.com/en-us (Status: 200)
-Working link in Footer: https://privacy.scjbrands.com/en-us (Status: 200)
-Working link in Footer: https://contact.scjbrands.com/en-us (Status: 200)
-
-Footer Test Summary:
-Total Working Links: 13
-Total Broken Links: 1
-
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-bd775-ub-biz-browse-VYRNASCJBP-9--Chromium\test-finished-1.png]]
-]]>
-</system-out>
-<system-err>
-<![CDATA[Broken link in Footer: https://www.facebook.com/theblueparadox (Status: 400)
-]]>
-</system-err>
-</testcase>
-<testcase name="Website Testing Suite › Check all header links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-11]" classname="main.spec.js" time="38.004">
-<system-out>
-<![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-11
-Total Header links found: 0
-
-Header Test Summary:
-Total Working Links: 0
-Total Broken Links: 0
-
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-2e2ad-b-biz-browse-VYRNASCJBP-11--Chromium\test-finished-1.png]]
-]]>
-</system-out>
-</testcase>
-</testsuite>
-<testsuite name="visualTestRunner.spec.js" timestamp="2025-02-06T04:44:48.799Z" hostname="Chromium" tests="9" failures="0" skipped="0" time="605.513" errors="0">
-<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/" classname="visualTestRunner.spec.js" time="74.592">
+<testsuites id="" name="" tests="9" failures="0" skipped="0" errors="0" time="125.472436">
+<testsuite name="visualTestRunner.spec.js" timestamp="2025-02-06T05:52:15.703Z" hostname="Chromium" tests="9" failures="0" skipped="0" time="862.128" errors="0">
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/" classname="visualTestRunner.spec.js" time="70.987">
 <system-out>
 <![CDATA[📸 Screenshot captured for https://www.blueparadox.com/
 📊 Diff generated for https://www.blueparadox.com/
@@ -234,64 +10,88 @@ Total Broken Links: 0
 ]]>
 </system-out>
 <system-err>
-<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/: 1.37%
+<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/: 1.26%
 ]]>
 </system-err>
 </testcase>
-<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/plastic-waste-crisis" classname="visualTestRunner.spec.js" time="76.177">
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/plastic-waste-crisis" classname="visualTestRunner.spec.js" time="109.741">
 <system-out>
 <![CDATA[📸 Screenshot captured for https://www.blueparadox.com/en/plastic-waste-crisis
 📊 Diff generated for https://www.blueparadox.com/en/plastic-waste-crisis
 📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_plastic_waste_crisis_report.html
 
 [[ATTACHMENT|..\test-results\visualTestRunner-Screensho-40baf-com-en-plastic-waste-crisis-Chromium\test-finished-1.png]]
+📸 Screenshot captured for https://www.blueparadox.com/en/plastic-waste-crisis
+📊 Diff generated for https://www.blueparadox.com/en/plastic-waste-crisis
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_plastic_waste_crisis_report.html
+
+[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-40baf-com-en-plastic-waste-crisis-Chromium-retry1\test-finished-1.png]]
 ]]>
 </system-out>
 <system-err>
-<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/en/plastic-waste-crisis: 1.60%
+<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/en/plastic-waste-crisis: 3.05%
+❌ Mismatch detected for https://www.blueparadox.com/en/plastic-waste-crisis: 2.97%
 ]]>
 </system-err>
 </testcase>
-<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/solutions" classname="visualTestRunner.spec.js" time="76.514">
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/solutions" classname="visualTestRunner.spec.js" time="110.501">
 <system-out>
 <![CDATA[📸 Screenshot captured for https://www.blueparadox.com/en/solutions
 📊 Diff generated for https://www.blueparadox.com/en/solutions
 📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_solutions_report.html
 
 [[ATTACHMENT|..\test-results\visualTestRunner-Screensho-5341b-lueparadox-com-en-solutions-Chromium\test-finished-1.png]]
+📸 Screenshot captured for https://www.blueparadox.com/en/solutions
+📊 Diff generated for https://www.blueparadox.com/en/solutions
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_solutions_report.html
+
+[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-5341b-lueparadox-com-en-solutions-Chromium-retry1\test-finished-1.png]]
 ]]>
 </system-out>
 <system-err>
 <![CDATA[❌ Mismatch detected for https://www.blueparadox.com/en/solutions: 1.62%
+❌ Mismatch detected for https://www.blueparadox.com/en/solutions: 1.62%
 ]]>
 </system-err>
 </testcase>
-<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/resources" classname="visualTestRunner.spec.js" time="77.093">
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/resources" classname="visualTestRunner.spec.js" time="110.006">
 <system-out>
 <![CDATA[📸 Screenshot captured for https://www.blueparadox.com/en/resources
 📊 Diff generated for https://www.blueparadox.com/en/resources
 📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_resources_report.html
 
 [[ATTACHMENT|..\test-results\visualTestRunner-Screensho-656e1-lueparadox-com-en-resources-Chromium\test-finished-1.png]]
+📸 Screenshot captured for https://www.blueparadox.com/en/resources
+📊 Diff generated for https://www.blueparadox.com/en/resources
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_resources_report.html
+
+[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-656e1-lueparadox-com-en-resources-Chromium-retry1\test-finished-1.png]]
 ]]>
 </system-out>
 <system-err>
-<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/en/resources: 1.51%
+<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/en/resources: 2.88%
+❌ Mismatch detected for https://www.blueparadox.com/en/resources: 1.51%
 ]]>
 </system-err>
 </testcase>
-<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/in-the-news" classname="visualTestRunner.spec.js" time="78.128">
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/in-the-news" classname="visualTestRunner.spec.js" time="113.234">
 <system-out>
 <![CDATA[📸 Screenshot captured for https://www.blueparadox.com/en/in-the-news
 📊 Diff generated for https://www.blueparadox.com/en/in-the-news
 📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_in_the_news_report.html
 ✅ Screenshots match for https://www.blueparadox.com/en/in-the-news
 
-[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-eb783-eparadox-com-en-in-the-news-Chromium\test-finished-1.png]]
+[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-eb783-eparadox-com-en-in-the-news-Chromium\trace.zip]]
+📸 Screenshot captured for https://www.blueparadox.com/en/in-the-news
+📊 Diff generated for https://www.blueparadox.com/en/in-the-news
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_in_the_news_report.html
+✅ Screenshots match for https://www.blueparadox.com/en/in-the-news
+
+[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-eb783-eparadox-com-en-in-the-news-Chromium-retry1\test-finished-1.png]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/the-exhibit" classname="visualTestRunner.spec.js" time="77.486">
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/the-exhibit" classname="visualTestRunner.spec.js" time="90.591">
 <system-out>
 <![CDATA[📸 Screenshot captured for https://www.blueparadox.com/en/the-exhibit
 📊 Diff generated for https://www.blueparadox.com/en/the-exhibit
@@ -301,11 +101,11 @@ Total Broken Links: 0
 ]]>
 </system-out>
 <system-err>
-<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/en/the-exhibit: 0.50%
+<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/en/the-exhibit: 0.88%
 ]]>
 </system-err>
 </testcase>
-<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/about-the-movement" classname="visualTestRunner.spec.js" time="74.111">
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/about-the-movement" classname="visualTestRunner.spec.js" time="75.741">
 <system-out>
 <![CDATA[📸 Screenshot captured for https://www.blueparadox.com/en/about-the-movement
 📊 Diff generated for https://www.blueparadox.com/en/about-the-movement
@@ -319,21 +119,27 @@ Total Broken Links: 0
 ]]>
 </system-err>
 </testcase>
-<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/take-action" classname="visualTestRunner.spec.js" time="45.591">
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/take-action" classname="visualTestRunner.spec.js" time="110.318">
 <system-out>
 <![CDATA[📸 Screenshot captured for https://www.blueparadox.com/en/take-action
 📊 Diff generated for https://www.blueparadox.com/en/take-action
 📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_take_action_report.html
 
 [[ATTACHMENT|..\test-results\visualTestRunner-Screensho-f1aff-eparadox-com-en-take-action-Chromium\test-finished-1.png]]
+📸 Screenshot captured for https://www.blueparadox.com/en/take-action
+📊 Diff generated for https://www.blueparadox.com/en/take-action
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_take_action_report.html
+
+[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-f1aff-eparadox-com-en-take-action-Chromium-retry1\test-finished-1.png]]
 ]]>
 </system-out>
 <system-err>
 <![CDATA[❌ Mismatch detected for https://www.blueparadox.com/en/take-action: 2.38%
+❌ Mismatch detected for https://www.blueparadox.com/en/take-action: 2.38%
 ]]>
 </system-err>
 </testcase>
-<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/#calculatorModal" classname="visualTestRunner.spec.js" time="25.821">
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/#calculatorModal" classname="visualTestRunner.spec.js" time="71.009">
 <system-out>
 <![CDATA[📸 Screenshot captured for https://www.blueparadox.com/#calculatorModal
 📊 Diff generated for https://www.blueparadox.com/#calculatorModal
@@ -343,7 +149,7 @@ Total Broken Links: 0
 ]]>
 </system-out>
 <system-err>
-<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/#calculatorModal: 1.39%
+<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/#calculatorModal: 2.42%
 ]]>
 </system-err>
 </testcase>

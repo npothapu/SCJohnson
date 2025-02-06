@@ -1,0 +1,2 @@
+Failed to run Lighthouse for https://www.blueparadox.com/en/plastic-waste-crisis after 3 attempts
+Failed to run Lighthouse for https://www.blueparadox.com/en/in-the-news after 3 attempts
