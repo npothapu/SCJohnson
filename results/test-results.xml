@@ -1,12 +1,10 @@
-<testsuites id="" name="" tests="5" failures="2" skipped="0" errors="0" time="87.82343800000001">
-<testsuite name="main.spec.js" timestamp="2025-02-05T22:20:30.411Z" hostname="Chromium" tests="5" failures="2" skipped="0" time="163.403" errors="0">
-<testcase name="Website Testing Suite › Extract and save distinct links - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" classname="main.spec.js" time="9.644">
+<testsuites id="" name="" tests="13" failures="1" skipped="0" errors="0" time="97.860126">
+<testsuite name="main.spec.js" timestamp="2025-02-05T23:55:49.816Z" hostname="Chromium" tests="4" failures="1" skipped="0" time="186.777" errors="0">
+<testcase name="Website Testing Suite › Extract and save distinct links - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" classname="main.spec.js" time="11.284">
 <system-out>
 <![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-14
 Navigating to URL: https://www.blueparadox.com/
 Extracted 9 unique links.
-
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-95638-b-biz-browse-VYRNASCJBP-14--Chromium\test-finished-1.png]]
 ]]>
 </system-out>
 <system-err>
@@ -14,7 +12,7 @@ Extracted 9 unique links.
 ]]>
 </system-err>
 </testcase>
-<testcase name="Website Testing Suite › Check all links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" classname="main.spec.js" time="41.242">
+<testcase name="Website Testing Suite › Check all links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" classname="main.spec.js" time="68.16">
 <failure message="main.spec.js:34:5 Check all links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14]" type="FAILURE">
 <![CDATA[  [Chromium] › main.spec.js:34:5 › Website Testing Suite › Check all links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-14] 
 
@@ -151,11 +149,11 @@ Extracted 9 unique links.
 <![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-14
 🔍 Running tests for environment: qa
 🌍 Testing BASE_URL: https://www.blueparadox.com/
-🔗 Total Links Found: 20
+🔗 Total Links Found: 14
 
 === ✅ Link Check Summary ✅ ===
-🔗 Total Links Checked: 20
-✅ Passed Links: 19
+🔗 Total Links Checked: 14
+✅ Passed Links: 13
 ❌ Failed Links: 1
 ❌ Failed URLs:
 https://www.facebook.com/theblueparadox
@@ -181,7 +179,7 @@ https://www.facebook.com/theblueparadox
 ]]>
 </system-out>
 </testcase>
-<testcase name="Website Testing Suite › Check all footer links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-9]" classname="main.spec.js" time="19.94">
+<testcase name="Website Testing Suite › Check all footer links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-9]" classname="main.spec.js" time="57.683">
 <system-out>
 <![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-9
 Total Footer links found: 14
@@ -211,7 +209,7 @@ Total Broken Links: 1
 ]]>
 </system-err>
 </testcase>
-<testcase name="Website Testing Suite › Check all header links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-11]" classname="main.spec.js" time="12.021">
+<testcase name="Website Testing Suite › Check all header links for broken URLs - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-11]" classname="main.spec.js" time="49.65">
 <system-out>
 <![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-11
 Total Header links found: 0
@@ -224,86 +222,130 @@ Total Broken Links: 0
 ]]>
 </system-out>
 </testcase>
-<testcase name="Website Testing Suite › SC Johnson Homepage Screenshot Test - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-3]" classname="main.spec.js" time="80.556">
-<failure message="main.spec.js:53:5 SC Johnson Homepage Screenshot Test - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-3]" type="FAILURE">
-<![CDATA[  [Chromium] › main.spec.js:53:5 › Website Testing Suite › SC Johnson Homepage Screenshot Test - [JIRA: https://jira.uhub.biz/browse/VYRNASCJBP-3] 
-
-    Error: ❌ Visual mismatch detected! Images differ by 4.07%
-    🔍 Review the report at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\scjohnson_homepage_report.html
-
-       at ..\utils\helpers\visualTesting.js:147
-
-      145 |
-      146 |     if (diff.misMatchPercentage > 0) {
-    > 147 |         throw new Error(`❌ Visual mismatch detected! Images differ by ${diff.misMatchPercentage}%\n🔍 Review the report at: ${reportPath}`);
-          |               ^
-      148 |     }
-      149 |     console.log("✅ Screenshots match!");
-      150 | }
-        at captureAndCompareScreenshot (C:\2025Playwright-Projects\SCJohnson\utils\helpers\visualTesting.js:147:15)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:56:9
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
-
-    Error: ❌ Visual mismatch detected! Images differ by 4.09%
-    🔍 Review the report at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\scjohnson_homepage_report.html
-
-       at ..\utils\helpers\visualTesting.js:147
-
-      145 |
-      146 |     if (diff.misMatchPercentage > 0) {
-    > 147 |         throw new Error(`❌ Visual mismatch detected! Images differ by ${diff.misMatchPercentage}%\n🔍 Review the report at: ${reportPath}`);
-          |               ^
-      148 |     }
-      149 |     console.log("✅ Screenshots match!");
-      150 | }
-        at captureAndCompareScreenshot (C:\2025Playwright-Projects\SCJohnson\utils\helpers\visualTesting.js:147:15)
-        at C:\2025Playwright-Projects\SCJohnson\tests\main.spec.js:56:9
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium-retry1\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium-retry1\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium-retry1\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
+</testsuite>
+<testsuite name="visualTestRunner.spec.js" timestamp="2025-02-05T23:55:49.816Z" hostname="Chromium" tests="9" failures="0" skipped="0" time="570.292" errors="0">
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/" classname="visualTestRunner.spec.js" time="71.296">
 <system-out>
-<![CDATA[Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-3
-📸 New screenshot saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\current_snapshots\scjohnson_homepage_chromium.png
-📊 Diff image saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\diffs\scjohnson_homepage_diff.png
-📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\scjohnson_homepage_report.html
+<![CDATA[📸 Screenshot captured for https://www.blueparadox.com/
+📊 Diff generated for https://www.blueparadox.com/
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com__report.html
 
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium\trace.zip]]
-Refer to JIRA ticket: https://jira.uhub.biz/browse/VYRNASCJBP-3
-📸 New screenshot saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\current_snapshots\scjohnson_homepage_chromium.png
-📊 Diff image saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\diffs\scjohnson_homepage_diff.png
-📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\scjohnson_homepage_report.html
-
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium-retry1\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\main-Website-Testing-Suite-faba2-ub-biz-browse-VYRNASCJBP-3--Chromium-retry1\trace.zip]]
+[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-435b4--https-www-blueparadox-com--Chromium\test-finished-1.png]]
 ]]>
 </system-out>
+<system-err>
+<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/: 2.01%
+]]>
+</system-err>
+</testcase>
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/plastic-waste-crisis" classname="visualTestRunner.spec.js" time="71.948">
+<system-out>
+<![CDATA[📸 Screenshot captured for https://www.blueparadox.com/en/plastic-waste-crisis
+📊 Diff generated for https://www.blueparadox.com/en/plastic-waste-crisis
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_plastic_waste_crisis_report.html
+✅ Screenshots match for https://www.blueparadox.com/en/plastic-waste-crisis
+
+[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-40baf-com-en-plastic-waste-crisis-Chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/solutions" classname="visualTestRunner.spec.js" time="70.665">
+<system-out>
+<![CDATA[📸 Screenshot captured for https://www.blueparadox.com/en/solutions
+📊 Diff generated for https://www.blueparadox.com/en/solutions
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_solutions_report.html
+
+[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-5341b-lueparadox-com-en-solutions-Chromium\test-finished-1.png]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/en/solutions: 1.62%
+]]>
+</system-err>
+</testcase>
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/resources" classname="visualTestRunner.spec.js" time="71.125">
+<system-out>
+<![CDATA[📸 Screenshot captured for https://www.blueparadox.com/en/resources
+📊 Diff generated for https://www.blueparadox.com/en/resources
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_resources_report.html
+
+[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-656e1-lueparadox-com-en-resources-Chromium\test-finished-1.png]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/en/resources: 1.51%
+]]>
+</system-err>
+</testcase>
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/in-the-news" classname="visualTestRunner.spec.js" time="71.65">
+<system-out>
+<![CDATA[📸 Screenshot captured for https://www.blueparadox.com/en/in-the-news
+📊 Diff generated for https://www.blueparadox.com/en/in-the-news
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_in_the_news_report.html
+
+[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-eb783-eparadox-com-en-in-the-news-Chromium\test-finished-1.png]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/en/in-the-news: 1.22%
+]]>
+</system-err>
+</testcase>
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/the-exhibit" classname="visualTestRunner.spec.js" time="72.977">
+<system-out>
+<![CDATA[📸 Screenshot captured for https://www.blueparadox.com/en/the-exhibit
+📊 Diff generated for https://www.blueparadox.com/en/the-exhibit
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_the_exhibit_report.html
+
+[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-6d856-eparadox-com-en-the-exhibit-Chromium\test-finished-1.png]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/en/the-exhibit: 0.50%
+]]>
+</system-err>
+</testcase>
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/about-the-movement" classname="visualTestRunner.spec.js" time="74.386">
+<system-out>
+<![CDATA[📸 Screenshot captured for https://www.blueparadox.com/en/about-the-movement
+📊 Diff generated for https://www.blueparadox.com/en/about-the-movement
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_about_the_movement_report.html
+
+[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-7c768-x-com-en-about-the-movement-Chromium\test-finished-1.png]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/en/about-the-movement: 1.46%
+]]>
+</system-err>
+</testcase>
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/en/take-action" classname="visualTestRunner.spec.js" time="32.686">
+<system-out>
+<![CDATA[📸 Screenshot captured for https://www.blueparadox.com/en/take-action
+📊 Diff generated for https://www.blueparadox.com/en/take-action
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com_en_take_action_report.html
+
+[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-f1aff-eparadox-com-en-take-action-Chromium\test-finished-1.png]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/en/take-action: 2.38%
+]]>
+</system-err>
+</testcase>
+<testcase name="Screenshot Tests › Screenshot Test for https://www.blueparadox.com/#calculatorModal" classname="visualTestRunner.spec.js" time="33.559">
+<system-out>
+<![CDATA[📸 Screenshot captured for https://www.blueparadox.com/#calculatorModal
+📊 Diff generated for https://www.blueparadox.com/#calculatorModal
+📄 HTML report saved at: C:\2025Playwright-Projects\SCJohnson\utils\visual_tests\reports\https___www_blueparadox_com__calculatorModal_report.html
+
+[[ATTACHMENT|..\test-results\visualTestRunner-Screensho-bf02a-paradox-com-calculatorModal-Chromium\test-finished-1.png]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[❌ Mismatch detected for https://www.blueparadox.com/#calculatorModal: 2.79%
+]]>
+</system-err>
 </testcase>
 </testsuite>
 </testsuites>

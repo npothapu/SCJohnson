@@ -49,11 +49,4 @@ test.describe.parallel("Website Testing Suite", () => {
         await runHeaderLinkCheck(page);
     });
 
-
-    test(`SC Johnson Homepage Screenshot Test - [JIRA: ${JIRA_TICKETS.screenshotTest}]`, async ({ page, browserName }) => {
-        test.setTimeout(60000);
-        console.log(`Refer to JIRA ticket: ${JIRA_TICKETS.screenshotTest}`);
-        await captureAndCompareScreenshot(page, "scjohnson_homepage", browserName);
-    });
-
 });

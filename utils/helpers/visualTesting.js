@@ -1,5 +1,7 @@
 /**
- * Screenshot Comparison Utility
+ * Author: Nandakumar Reddy
+ * Title: Associate Director of Technology
+ * Description:  Screenshot Comparison Utility
  * 
  * This script captures screenshots of web pages using Playwright and compares them
  * against baseline images stored in the `baseline_snapshots` directory. If it's the first run,
