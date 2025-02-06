@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighthouse Report Comparison</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row; /* Ensures side by side (right and left) display */
+        }
+        .report {
+            width: 50%;
+            height: 100vh;
+            overflow: auto;
+        }
+        .report-title {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lighthouse Report Comparison for https://www.blueparadox.com/</h1>
+    <div class="container">
+        <div class="report">
+            <div class="report-title">Desktop Report</div>
+            <iframe src="reports/https___www_blueparadox_com_/lighthouse-report-desktop.html" width="100%" height="90%"></iframe>
+        </div>
+        <div class="report">
+            <div class="report-title">Mobile Report</div>
+            <iframe src="reports/https___www_blueparadox_com_/lighthouse-report-mobile.html" width="100%" height="90%"></iframe>
+        </div>
+    </div>
+</body>
+</html>
